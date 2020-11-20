@@ -27,7 +27,7 @@ public class App {
 		
 
 		
-		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo());
+		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre() + " " + per.getPais().getCiudad().getNombre());
 		
 		((ConfigurableApplicationContext)appcontext).close();
 		
