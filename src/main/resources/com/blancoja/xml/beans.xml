@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
      
-    <bean id="persona" class="com.blancoja.beans.Persona">
+    <bean id="persona" class="com.blancoja.beans.Persona" name="personaBean2">
 		<property name="pais">
 		    <bean id="pais" class="com.blancoja.beans.Pais">
    			 	<property name="nombre" value="España"></property>
@@ -22,6 +22,5 @@
 		<property name="apodo" value="blancoja"></property>
     </bean>
     
-
-     
+	<alias name="persona" alias="personaBean"/>
 </beans> 

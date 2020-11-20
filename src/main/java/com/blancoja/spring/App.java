@@ -15,7 +15,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		ApplicationContext appcontext= new ClassPathXmlApplicationContext("com/blancoja/xml/beans.xml");
-		Persona per= (Persona) appcontext.getBean("persona");
+		Persona per= (Persona) appcontext.getBean("personaBean2");
 		/*
 		 * AnnotationConfigApplicationContext appcontext= new
 		 * AnnotationConfigApplicationContext(Appconfig.class,AppConfig2.class);
