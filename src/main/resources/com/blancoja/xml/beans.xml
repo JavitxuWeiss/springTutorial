@@ -6,8 +6,10 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
      
-    <bean id="mundo" class="com.blancoja.beans.Mundo">
-    	<property name="saludo" value="hola Caracola!!!"></property>
+    <bean id="persona" class="com.blancoja.beans.Persona">
+    	<constructor-arg index="0" value="1"></constructor-arg>
+    	<constructor-arg index="1" value="Jaime"></constructor-arg>
+    	<constructor-arg index="2" value="MenbrilloMan"></constructor-arg>
     </bean>
      
 </beans> 
