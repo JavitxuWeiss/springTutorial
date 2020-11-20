@@ -7,19 +7,21 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
      
     <bean id="persona" class="com.blancoja.beans.Persona">
-		<property name="pais" ref="pais"></property>
+		<property name="pais">
+		    <bean id="pais" class="com.blancoja.beans.Pais">
+   			 	<property name="nombre" value="España"></property>
+  			  	<property name="ciudad">
+    				<bean id="ciudad" class="com.blancoja.beans.Ciudad">
+    					<property name="nombre" value="Barcelona"></property>
+    				</bean>	
+    			</property>
+    		</bean>	
+		</property>
 		<property name="id" value="1234"></property>
 		<property name="nombre" value="Javi"></property>
 		<property name="apodo" value="blancoja"></property>
     </bean>
     
-    <bean id="pais" class="com.blancoja.beans.Pais">
-    	<property name="nombre" value="España"></property>
-    	<property name="ciudad" ref="ciudad"></property>
-    </bean>	
-     
-    <bean id="ciudad" class="com.blancoja.beans.Ciudad">
-    	<property name="nombre" value="Barcelona"></property>
-    </bean>	
+
      
 </beans> 
