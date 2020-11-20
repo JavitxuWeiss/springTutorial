@@ -1,18 +1,22 @@
 package com.blancoja.beans;
 
+import java.util.List;
+
 public class Pais {
 
 	private String nombre;
-	private Ciudad ciudad;
+	private List<Ciudad> ciudades;
 	
 	
 
-	public Ciudad getCiudad() {
-		return ciudad;
+
+
+	public List<Ciudad> getCiudades() {
+		return ciudades;
 	}
 
-	public void setCiudad(Ciudad ciudad) {
-		this.ciudad = ciudad;
+	public void setCiudades(List<Ciudad> ciudades) {
+		this.ciudades = ciudades;
 	}
 
 	public String getNombre() {

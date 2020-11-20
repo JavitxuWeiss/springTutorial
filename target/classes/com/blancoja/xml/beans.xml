@@ -10,10 +10,14 @@
 		<property name="pais">
 		    <bean id="pais" class="com.blancoja.beans.Pais">
    			 	<property name="nombre" value="España"></property>
-  			  	<property name="ciudad">
-    				<bean id="ciudad" class="com.blancoja.beans.Ciudad">
-    					<property name="nombre" value="Barcelona"></property>
-    				</bean>	
+  			  	<property name="ciudades">
+  			  		<list>
+  			  			<ref bean="ciudad1"/>
+  			  			<ref bean="ciudad2"/>
+  			  			<ref bean="ciudad3"/> 
+						<ref bean="ciudad4"/>  			  			 			  		
+  			  		</list>
+
     			</property>
     		</bean>	
 		</property>
@@ -21,6 +25,20 @@
 		<property name="nombre" value="Javi"></property>
 		<property name="apodo" value="blancoja"></property>
     </bean>
+    
+    <bean id="ciudad1" class="com.blancoja.beans.Ciudad">
+		<property name="nombre" value="Barcelona"></property>
+	</bean>	
+	<bean id="ciudad2" class="com.blancoja.beans.Ciudad">
+		<property name="nombre" value="Lleida"></property>
+	</bean>	
+	<bean id="ciudad3" class="com.blancoja.beans.Ciudad">
+		<property name="nombre" value="Girona"></property>
+	</bean>	
+    <bean id="ciudad4" class="com.blancoja.beans.Ciudad">
+		<property name="nombre" value="Tarragona"></property>
+	</bean>	
+    
     
 	<alias name="persona" alias="personaBean"/>
 </beans> 

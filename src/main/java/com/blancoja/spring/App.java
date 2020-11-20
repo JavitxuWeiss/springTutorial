@@ -5,6 +5,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 //import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.blancoja.beans.Ciudad;
 //import com.blancoja.beans.AppConfig2;
 //import com.blancoja.beans.Appconfig;
 //import com.blancoja.beans.Mundo;
@@ -25,9 +26,15 @@ public class App {
 		//Mundo m = appcontext.getBean(Mundo.class); //dos maneras de acceder a un bean desde xml definition
 		//Mundo m2 = (Mundo) appcontext.getBean("marte");
 		
+		String cadenaCiudades="";
+		for(Ciudad ciudadActual : per.getPais().getCiudades()) {
+			cadenaCiudades += ciudadActual.getNombre() + "-";
+			
+			
+		}
 
 		
-		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre() + " " + per.getPais().getCiudad().getNombre());
+		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre() + " " + cadenaCiudades);
 		
 		((ConfigurableApplicationContext)appcontext).close();
 		
