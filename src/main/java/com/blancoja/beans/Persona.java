@@ -3,9 +3,12 @@ package com.blancoja.beans;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
 
-public class Persona {
+
+public class Persona implements InitializingBean, DisposableBean{
 	
 	private int id;
 	private String nombre;
@@ -13,7 +16,7 @@ public class Persona {
 	private Pais pais;
 	private Ciudad ciudad;
 	
-	
+	/*
 	@PostConstruct
 	private void init() {
 		System.out.println("Justo antes de inicializar BEAN!!");
@@ -23,7 +26,7 @@ public class Persona {
 	private void destroy() {
 		System.out.println("Justo antes de destruir BEAN!!");
 	}
-	
+	*/
 	public Pais getPais() {
 		return pais;
 	}
@@ -62,6 +65,18 @@ public class Persona {
 
 	public void setCiudad(Ciudad ciudad) {
 		this.ciudad = ciudad;
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("Justo antes de inicializar BEAN!!");
+		
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("Justo antes de destruir BEAN!!");
+		
 	}
 	
 	
