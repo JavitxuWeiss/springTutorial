@@ -6,18 +6,12 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-	<bean class="com.blancoja.beans.BlancojaBeanPostProcessor"></bean>
-     
-    <bean id="persona" class="com.blancoja.beans.Persona" autowire="byName" >
-    	<property name="apodo" value="BlancojaCrack"></property>
-    </bean>
-
-    <bean id="pais" class="com.blancoja.beans.Pais">
-	 	<property name="nombre" value="España"></property>
-	</bean>	
-
-    <bean id="ciudad" class="com.blancoja.beans.Ciudad">
-		<property name="nombre" value="Barcelona"></property>
-	</bean>	
-
+	<bean id="messi" class="com.blancoja.beans.Jugador">
+		<property name="numero" value="10"></property>
+		<property name="nombre" value="Leo Messi"></property>
+		<property name="equipo" ref="barcelona"></property>
+	</bean>
+	
+	<bean id="barcelona" class="com.blancoja.beans.Barcelona"></bean>
+	<bean id="juventus" class="com.blancoja.beans.Juventus"></bean>
 </beans> 
