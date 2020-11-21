@@ -1,5 +1,7 @@
 package com.blancoja.beans;
 
+import org.springframework.beans.factory.annotation.Required;
+
 import com.blancoja.interfaces.IEquipo;
 
 public class Jugador {
@@ -23,6 +25,8 @@ public class Jugador {
 	public IEquipo getEquipo() {
 		return equipo;
 	}
+	
+	@Required
 	public void setEquipo(IEquipo equipo) {
 		this.equipo = equipo;
 	}

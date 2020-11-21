@@ -6,10 +6,12 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+    
 	<bean id="messi" class="com.blancoja.beans.Jugador">
 		<property name="numero" value="10"></property>
 		<property name="nombre" value="Leo Messi"></property>
-		<property name="equipo" ref="barcelona"></property>
+		
 	</bean>
 	
 	<bean id="barcelona" class="com.blancoja.beans.Barcelona"></bean>
