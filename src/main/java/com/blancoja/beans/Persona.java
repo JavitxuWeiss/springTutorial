@@ -9,7 +9,13 @@ public class Persona {
 	private Ciudad ciudad;
 	
 
+	private void init() {
+		System.out.println("Justo antes de inicializar BEAN!!");
+	}
 	
+	private void destroy() {
+		System.out.println("Justo antes de destruir BEAN!!");
+	}
 	
 	public Pais getPais() {
 		return pais;
