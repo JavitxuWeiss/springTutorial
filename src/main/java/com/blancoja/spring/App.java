@@ -16,7 +16,7 @@ public class App {
 	public static void main(String[] args) {
 		
 		ApplicationContext appcontext= new ClassPathXmlApplicationContext("com/blancoja/xml/beans.xml");
-		Persona per= (Persona) appcontext.getBean("personaBean2");
+		Persona per= (Persona) appcontext.getBean("persona");
 		/*
 		 * AnnotationConfigApplicationContext appcontext= new
 		 * AnnotationConfigApplicationContext(Appconfig.class,AppConfig2.class);
@@ -26,15 +26,9 @@ public class App {
 		//Mundo m = appcontext.getBean(Mundo.class); //dos maneras de acceder a un bean desde xml definition
 		//Mundo m2 = (Mundo) appcontext.getBean("marte");
 		
-		String cadenaCiudades="";
-		for(Ciudad ciudadActual : per.getPais().getCiudades()) {
-			cadenaCiudades += ciudadActual.getNombre() + "-";
-			
-			
-		}
 
 		
-		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre() + " " + cadenaCiudades);
+		System.out.println(per.getId() + " " + per.getNombre() + " " + per.getApodo() + " " + per.getPais().getNombre() + " " + per.getCiudad().getNombre());
 		
 		((ConfigurableApplicationContext)appcontext).close();
 		
