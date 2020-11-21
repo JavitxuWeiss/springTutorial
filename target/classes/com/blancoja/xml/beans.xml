@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-
+	<bean class="com.blancoja.beans.BlancojaBeanPostProcessor"></bean>
      
     <bean id="persona" class="com.blancoja.beans.Persona" autowire="byName" >
     	<property name="apodo" value="BlancojaCrack"></property>
