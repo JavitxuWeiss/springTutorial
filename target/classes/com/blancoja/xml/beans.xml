@@ -6,11 +6,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
      
-    <bean id="persona" class="com.blancoja.beans.Persona" autowire="byName">
-
-		<property name="id" value="1234"></property>
-		<property name="nombre" value="Javi"></property>
-		<property name="apodo" value="blancoja"></property>
+    <bean id="persona" class="com.blancoja.beans.Persona" autowire="byName" scope="singleton" lazy-init="true">
+    
     </bean>
 
     <bean id="pais" class="com.blancoja.beans.Pais">
