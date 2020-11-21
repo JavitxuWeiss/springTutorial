@@ -1,5 +1,10 @@
 package com.blancoja.beans;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+
+
 public class Persona {
 	
 	private int id;
@@ -8,11 +13,13 @@ public class Persona {
 	private Pais pais;
 	private Ciudad ciudad;
 	
-
+	
+	@PostConstruct
 	private void init() {
 		System.out.println("Justo antes de inicializar BEAN!!");
 	}
 	
+	@PreDestroy
 	private void destroy() {
 		System.out.println("Justo antes de destruir BEAN!!");
 	}
