@@ -7,17 +7,8 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-	<context:annotation-config />
-    
-	<bean id="messi" class="com.blancoja.beans.Jugador">
-		<property name="numero" value="10"></property>
-		<property name="nombre" value="Leo Messi"></property>
-		
-	</bean>
-	
-	<bean id="barcelona" class="com.blancoja.beans.Barcelona">
-		<qualifier value="barcelonaQualifier"></qualifier>
-	</bean>
-	
-	<bean id="juventus" class="com.blancoja.beans.Juventus"></bean>
+
+    <context:component-scan base-package="com.blancoja"></context:component-scan>
+
+
 </beans> 

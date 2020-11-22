@@ -22,10 +22,10 @@ public class App {
 		
 		System.out.println(jug.getNombre() + " - " + jug.getEquipo().mostrar());
 		
-		IEquipo bar = (IEquipo) appcontext.getBean("barcelona");
+		//IEquipo bar = (IEquipo) appcontext.getBean("barcelona");
 		IEquipo juv = (IEquipo) appcontext.getBean("juventus");
 		
-		System.out.println(bar.mostrar());
+		//System.out.println(bar.mostrar());
 		System.out.println(juv.mostrar());
 		
 				
